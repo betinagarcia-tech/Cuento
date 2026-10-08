@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de Cuentos Infantil</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería PDF.js para leer el PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <!-- Librería PageFlip para el efecto de pasar página -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>✨ Mi Cuento Mágico ✨</h1>
+        
+        <!-- Barra de Controles de Accesibilidad y Navegación -->
+        <div class="controls-bar">
+            <!-- Navegación -->
+            <button id="btn-prev" class="btn btn-nav" title="Página Anterior">⬅️ Anterior</button>
+            <span id="page-num-display" class="page-indicator">Página 1</span>
+            <button id="btn-next" class="btn btn-nav" title="Página Siguiente">Siguiente ➡️</button>
+
+            <!-- Accesibilidad para Baja Visión -->
+            <div class="accessibility-tools">
+                <button id="btn-read" class="btn btn-action" title="Leer página en voz alta">🔊 Leer en Voz Alta</button>
+                <button id="btn-zoom-in" class="btn btn-zoom" title="Aumentar tamaño">A+</button>
+                <button id="btn-zoom-out" class="btn btn-zoom" title="Reducir tamaño">A-</button>
+            </div>
+        </div>
+
+        <div id="loading">✨ Cargando tu cuento mágico... ✨</div>
+    </div>
+
+    <div class="book-container" id="interactive-container">
+        <!-- El flipbook se generará aquí -->
+        <div id="flip-book" class="flip-book"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
